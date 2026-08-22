@@ -1,0 +1,26 @@
+cff-version: 1.2.0
+message: "Please cite this dataset and the specific measurement record used."
+title: "Resonance Lab Measurements"
+type: dataset
+authors:
+  - family-names: "Canonico"
+    given-names: "Michelangelo"
+    affiliation: "Direct Sound Records"
+identifiers:
+  - type: url
+    value: "https://github.com/directsoundrecords/resonance-lab-measurements"
+repository-code: "https://github.com/directsoundrecords/resonance-lab-measurements"
+url: "https://directsoundrecords.com/resonance-lab/"
+abstract: "Open structured observations of turntable setups created with Resonance Lab and published by Direct Sound Records."
+keywords:
+  - "Resonance Lab"
+  - "Direct Sound Records"
+  - "turntable measurement"
+  - "tonearm cartridge resonance"
+  - "turntable RPM"
+  - "wow and flutter"
+  - "turntable vibration"
+  - "stylus usage"
+  - "vinyl playback"
+license: CC-BY-4.0
+version: "1.0.0"
