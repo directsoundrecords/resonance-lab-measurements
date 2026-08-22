@@ -1,0 +1,1 @@
+measurement_id,setup_id,date,publication_status,title,measurement_type,turntable,tonearm,cartridge,resonance_hz,target_rpm,average_rpm,wow_rms_percent,flutter_rms_percent,wow_flutter_rms_percent,vibration_rms_mg,vibration_peak_mg,record_path
