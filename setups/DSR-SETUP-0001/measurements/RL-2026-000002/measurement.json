@@ -1,0 +1,101 @@
+{
+  "$schema": "../../../../schemas/measurement.schema.json",
+  "automatic_provenance": {
+    "analysis_method_version": "rpm-wf-1.0.0",
+    "app_build": "2",
+    "app_name": "Resonance Lab",
+    "app_version": "1.0",
+    "device_display_model": "iPhone",
+    "device_hardware_identifier": "iPhone16,1",
+    "os_name": "iOS",
+    "os_version": "26.6.1",
+    "platform": "iOS",
+    "timezone": "Europe/London"
+  },
+  "conditions": {
+    "device": {
+      "model": "iPhone16,1",
+      "os_version": "26.6.1",
+      "sensor_notes": "Core Motion sensors in the device; no laboratory instrument certification is claimed."
+    },
+    "measurement_duration_s": 15.000458541668195,
+    "repeat_number": 1,
+    "rpm_test_state": {
+      "record_state": "not_recorded",
+      "stylus_state": "not_tracking",
+      "target_rpm": 33.333333333333336
+    }
+  },
+  "creator": {
+    "affiliation": "",
+    "attribution_mode": "anonymous",
+    "name": "Anonymous contributor",
+    "role": "Measurement author",
+    "source_measurement_uuid": "6086515D-DB06-46DA-B93E-F0862183110F"
+  },
+  "files": {
+    "human_readable_record": "README.md",
+    "images": [],
+    "measurement_json": "measurement.json",
+    "rpm_series_csv": "not_published",
+    "rpm_spectrum_csv": "rpm/spectrum.csv",
+    "source_report": "not_applicable",
+    "vibration_series_csv": "not_available",
+    "vibration_spectrum_csv": "not_available"
+  },
+  "interpretation": {
+    "comparison_limitations": [
+      "Phone placement, orientation, support, operating state and environment affect vibration comparisons.",
+      "The phone measures mechanical vibration at its placement point. This contextual comparison does not directly measure or prove cartridge/tonearm or stylus/cantilever resonance, acoustic feedback, motor/bearing resonance, structural resonance, a specific cause, or causation. The ±1.0 Hz comparison window is a deterministic comparison rule, not a precision claim.",
+      "Resonance Lab does not claim laboratory vibration-instrument certification."
+    ],
+    "recommendation": "If you want to raise the calculated resonance, reduce total moving mass where practical or consider a lower-compliance cartridge; evaluate that calculation separately from the phone vibration result.",
+    "repeat_required": false,
+    "summary": "The calculated cartridge/tonearm resonance is 6.89 Hz, below the preferred 8–12 Hz region.\n\nNo Vibration observation is associated with this RPM measurement; combined Resonance × Vibration interpretation is not applicable to this record."
+  },
+  "keywords": ["AT-OC9XML","Audio-Technica","P3","RB330","RPM","Rega","Rega P3 Neo PSU MkII","Resonance Lab","cartridge tonearm resonance","turntable","wow and flutter"],
+  "language": "en",
+  "license": "CC-BY-4.0",
+  "measurement_authors": [{"affiliation":"","attribution_mode":"anonymous","name":"Anonymous contributor","role":"Measurement author","source_measurement_uuid":"6086515D-DB06-46DA-B93E-F0862183110F"}],
+  "measurement_completed_at": "2026-08-22T22:18:58.561Z",
+  "measurement_datetime": "2026-08-22T22:18:58.561Z",
+  "measurement_datetime_local": "2026-08-22T23:18:58.561+01:00",
+  "measurement_scope": ["combined_analysis","resonance_prediction","rpm","setup_metadata","stylus_usage_snapshot","wow_flutter"],
+  "measurement_started_at": "2026-08-22T22:18:43.560Z",
+  "measurement_timezone": "Europe/London",
+  "measurement_type": "rpm_measurement",
+  "measurement_uuid": "6086515d-db06-46da-b93e-f0862183110f",
+  "provenance": {
+    "data_entry_method": "Structured record created from Resonance Lab results and documented setup metadata.",
+    "known_limitations": ["No precise geographic coordinates, account data or device serial numbers are exported.","Setup fields marked with explicit missing-state tokens were not invented by the exporter.","The RPM CSV contains the persisted analysis trace, which may be downsampled from the internal uniform series."],
+    "raw_sensor_data_note": "RPM series are stored analysis trace points; vibration series are the stored processed 1-40 Hz signal. Original Core Motion sensor streams are not included.",
+    "raw_sensor_data_published": false,
+    "setup_metadata_source": "Resonance Lab saved setup",
+    "source_file": "not_available",
+    "source_type": "Resonance Lab measurement/export"
+  },
+  "public_measurement_id": "RL-2026-000002",
+  "public_setup_id": "DSR-SETUP-0001",
+  "publication_consent": {"attribution_confirmed":true,"license_confirmed":true,"public_data_submission":true},
+  "publication_status": "published",
+  "publisher": {"location_label":"London–Rome","name":"Direct Sound Records","url":"https://directsoundrecords.com/"},
+  "recommended_citation": "Anonymous contributor. “Rega P3 / Rega RB330 / Audio-Technica AT-OC9XML — Measurement, 22 August 2026.” Resonance Lab Measurement RL-2026-000002. Published by Direct Sound Records.",
+  "record_version": "0.1.0",
+  "related_applications": [],
+  "related_measurements": [],
+  "results": {
+    "combined_analysis": {"analysis_method_version":"combined-analysis-2.0.0","assessment":"not_assessed","comparison_window_hz":{"lower":5.886279353710169,"upper":7.886279353710169},"confidence":"unavailable","coverage":"unavailable","detail":"No Vibration observation is associated with this RPM measurement; combined Resonance × Vibration interpretation is not applicable to this record.","interpretation":"The calculated cartridge/tonearm resonance is 6.89 Hz, below the preferred 8–12 Hz region.\n\nNo Vibration observation is associated with this RPM measurement; combined Resonance × Vibration interpretation is not applicable to this record.","limitation":"The phone measures mechanical vibration at its placement point. This contextual comparison does not directly measure or prove cartridge/tonearm or stylus/cantilever resonance, acoustic feedback, motor/bearing resonance, structural resonance, a specific cause, or causation. The ±1.0 Hz comparison window is a deterministic comparison rule, not a precision claim.","measurement_state":"no_measurement","peak_relationship":"unknown","predicted_resonance_hz":6.886279353710169,"recommendations":["If you want to raise the calculated resonance, reduce total moving mass where practical or consider a lower-compliance cartridge; evaluate that calculation separately from the phone vibration result."],"resonance_position":"below_preferred","summary":"The calculated cartridge/tonearm resonance is 6.89 Hz, below the preferred 8–12 Hz region."},
+    "resonance_prediction": {"analysis_method_version":"resonance-1.0.0","cartridge_mass_g":7.6,"classification":"below_reference","compliance_used_um_mn":27.2,"effective_mass_g":11,"mounting_hardware_mass_g":1,"notes":"Calculated prediction; not a phone vibration measurement.","predicted_resonance_hz":6.886279353710169,"reference_region_hz":{"lower":8,"upper":12}},
+    "rpm": {"analysis_method_version":"rpm-wf-1.0.0","average_rpm":33.40425078325983,"flutter_band_hz":{"lower":6,"upper":20},"flutter_rms_percent":0.01414443701187423,"notes":"Wow uses [0.5, 6) Hz; flutter uses [6, 20] Hz. Values are unweighted when recorded as such.","package_conditions_apply":true,"peak_deviation_negative_percent":-0.5275636736395597,"peak_deviation_positive_percent":0.340904831912201,"series_file":"not_published","source_measurement_timestamp_utc":"2026-08-22T22:18:58.561Z","source_measurement_uuid":"6086515D-DB06-46DA-B93E-F0862183110F","spectrum_file":"rpm/spectrum.csv","speed_error_percent":0.2127523497794925,"speed_error_rpm":0.07091744992649751,"speed_standard_deviation_rpm":0.03383482664464922,"target_rpm":33.333333333333336,"test_duration_s":15.000458541668195,"weighting":"unweighted","wow_band_hz":{"lower":0.5,"upper":6},"wow_flutter_band_hz":{"lower":0.5,"upper":20},"wow_flutter_rms_percent":0.03955802917571884,"wow_rms_percent":0.036942828449973146},
+    "stylus_usage_snapshot": {"recorded_at":"2026-08-22T22:18:58.561Z","timing":"at_measurement","tracking_source":"Resonance Lab stylus cycle tracker","usage_hours":0}
+  },
+  "schema_version": "2.0.0",
+  "setup_snapshot": {"cartridge_manufacturer":"Audio-Technica","cartridge_mass_g":7.6,"cartridge_model":"AT-OC9XML","compliance_used_10hz_um_mn":27.2,"mounting_hardware_mass_g":1,"predicted_resonance_hz":6.886279353710169,"setup_name":"Rega P3 Neo PSU MkII","setup_uuid":"AED8BB91-5E90-4669-AEB0-61D8F52D2732","tonearm_effective_mass_g":11,"tonearm_manufacturer":"Rega","tonearm_model":"RB330","turntable_manufacturer":"Rega","turntable_model":"P3","vertical_tracking_force_g":2},
+  "setup_uuid": "aed8bb91-5e90-4669-aeb0-61d8f52d2732",
+  "slug": "rl-2026-000002",
+  "software": {"analysis_method_version":"reference-package-1.0.0","application_version":"1.0","developer":"Direct Sound Records","name":"Resonance Lab","platform":"iOS 26.6.1"},
+  "source_measurement_uuids": ["6086515D-DB06-46DA-B93E-F0862183110F"],
+  "submitter": {"relationship_to_measurement":"measurer"},
+  "title": "RL-2026-000002 - Rega P3 / Rega RB330 / Audio-Technica AT-OC9XML",
+  "date_published": "2026-08-23T16:07:24Z"
+}
