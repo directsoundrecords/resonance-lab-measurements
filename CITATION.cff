@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "Please cite this dataset and the specific setup or measurement record used."
+title: "Resonance Lab Measurements"
+type: dataset
+authors:
+  - name: "Direct Sound Records"
+identifiers:
+  - type: url
+    value: "https://github.com/directsoundrecords/resonance-lab-measurements"
+repository-code: "https://github.com/directsoundrecords/resonance-lab-measurements"
+url: "https://directsoundrecords.com/resonance-lab/"
+abstract: "Setup-centric public technical observations created with Resonance Lab and curated by Direct Sound Records."
+keywords:
+  - "Resonance Lab"
+  - "turntable measurement"
+  - "tonearm cartridge resonance"
+  - "turntable RPM"
+  - "wow and flutter"
+  - "turntable vibration"
+  - "vinyl playback"
+license: CC-BY-4.0
+version: "2.0.0"

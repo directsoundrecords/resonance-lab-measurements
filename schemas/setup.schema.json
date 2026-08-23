@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "setup.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "setup_uuid", "public_setup_id", "publication_status", "setup_name", "playback_system", "created_at", "last_modified", "publisher", "license"],
+  "allOf": [{"if":{"properties":{"publication_status":{"const":"published"}}},"then":{"properties":{"public_setup_id":{"type":"string"}}}},{"if":{"properties":{"publication_status":{"const":"draft"}}},"then":{"properties":{"public_setup_id":{"type":"null"}}}}],
+  "properties": {
+    "$schema": {"type": "string"}, "schema_version": {"const": "2.0.0"},
+    "setup_uuid": {"type": "string", "format": "uuid"},
+    "public_setup_id": {"type": ["string", "null"], "pattern": "^DSR-SETUP-[0-9]{4,}$"},
+    "publication_status":{"enum":["draft","submission","published"]},
+    "setup_name": {"type": "string", "minLength": 1}, "playback_system": {"$ref":"#/$defs/playbackSystem"},
+    "created_at": {"type": "string", "format":"date-time"}, "last_modified": {"type": "string", "format":"date-time"},
+    "publisher": {"$ref":"#/$defs/publisher"}, "license": {"const": "CC-BY-4.0"}
+  },
+  "$defs": {
+    "missing":{"enum":["not_recorded","not_available","not_applicable","not_confirmed"]},
+    "textValue":{"type":"string","minLength":1},
+    "numberValue":{"oneOf":[{"type":"number"},{"$ref":"#/$defs/missing"}]},
+    "nonNegativeValue":{"oneOf":[{"type":"number","minimum":0},{"$ref":"#/$defs/missing"}]},
+    "booleanValue":{"oneOf":[{"type":"boolean"},{"$ref":"#/$defs/missing"}]},
+    "component":{"type":"object","additionalProperties":false,"required":["manufacturer","model","serial_number"],"properties":{"manufacturer":{"$ref":"#/$defs/textValue"},"model":{"$ref":"#/$defs/textValue"},"serial_number":{"$ref":"#/$defs/textValue"}}},
+    "turntable":{"type":"object","additionalProperties":false,"required":["manufacturer","model","serial_number","drive_type","suspension_type","platter_mat","clamp_or_weight"],"properties":{"manufacturer":{"$ref":"#/$defs/textValue"},"model":{"$ref":"#/$defs/textValue"},"serial_number":{"$ref":"#/$defs/textValue"},"drive_type":{"$ref":"#/$defs/textValue"},"suspension_type":{"$ref":"#/$defs/textValue"},"platter_mat":{"$ref":"#/$defs/textValue"},"clamp_or_weight":{"$ref":"#/$defs/textValue"}}},
+    "tonearm":{"type":"object","additionalProperties":false,"required":["manufacturer","model","serial_number","effective_mass_g","headshell","headshell_mass_g","damping"],"properties":{"manufacturer":{"$ref":"#/$defs/textValue"},"model":{"$ref":"#/$defs/textValue"},"serial_number":{"$ref":"#/$defs/textValue"},"effective_mass_g":{"$ref":"#/$defs/nonNegativeValue"},"headshell":{"$ref":"#/$defs/textValue"},"headshell_mass_g":{"$ref":"#/$defs/nonNegativeValue"},"damping":{"$ref":"#/$defs/textValue"}}},
+    "compliance":{"type":"object","additionalProperties":false,"required":["published_value_um_mn","published_reference_frequency_hz","calculation_value_um_mn","conversion_applied","source"],"properties":{"published_value_um_mn":{"$ref":"#/$defs/nonNegativeValue"},"published_reference_frequency_hz":{"$ref":"#/$defs/nonNegativeValue"},"calculation_value_um_mn":{"$ref":"#/$defs/nonNegativeValue"},"conversion_applied":{"$ref":"#/$defs/booleanValue"},"conversion_note":{"type":["string","null"]},"source":{"$ref":"#/$defs/textValue"}}},
+    "cartridge":{"type":"object","additionalProperties":false,"required":["manufacturer","model","serial_number","stylus","cartridge_mass_g","mounting_hardware_mass_g","vertical_tracking_force_g","anti_skate_setting","alignment_geometry","azimuth_setting","vta_or_sra_setting","compliance"],"properties":{"manufacturer":{"$ref":"#/$defs/textValue"},"model":{"$ref":"#/$defs/textValue"},"serial_number":{"$ref":"#/$defs/textValue"},"stylus":{"$ref":"#/$defs/textValue"},"cartridge_mass_g":{"$ref":"#/$defs/nonNegativeValue"},"mounting_hardware_mass_g":{"$ref":"#/$defs/nonNegativeValue"},"vertical_tracking_force_g":{"$ref":"#/$defs/nonNegativeValue"},"anti_skate_setting":{"$ref":"#/$defs/textValue"},"alignment_geometry":{"$ref":"#/$defs/textValue"},"azimuth_setting":{"$ref":"#/$defs/textValue"},"vta_or_sra_setting":{"$ref":"#/$defs/textValue"},"compliance":{"$ref":"#/$defs/compliance"}}},
+    "playbackSystem":{"type":"object","additionalProperties":false,"required":["setup_name","turntable","tonearm","cartridge"],"properties":{"setup_name":{"type":["string","null"]},"turntable":{"$ref":"#/$defs/turntable"},"tonearm":{"$ref":"#/$defs/tonearm"},"cartridge":{"$ref":"#/$defs/cartridge"}}},
+    "publisher":{"type":"object","additionalProperties":false,"required":["name","url","location_label"],"properties":{"name":{"type":"string"},"url":{"type":"string"},"location_label":{"type":"string"}}}
+  }
+}
