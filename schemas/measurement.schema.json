@@ -15,7 +15,7 @@
     "public_measurement_id": {"type": ["string", "null"], "pattern": "^RL-[0-9]{4}-[0-9]{4,}$"},
     "setup_uuid": {"type": "string", "format": "uuid"},
     "public_setup_id": {"type": ["string", "null"], "pattern": "^DSR-SETUP-[0-9]{4,}$"},
-    "publication_status": {"enum": ["draft", "published"]},
+    "publication_status": {"enum": ["draft", "submission", "published"]},
     "measurement_type": {"enum": ["rpm_measurement", "vibration_measurement"]},
     "measurement_datetime": {"type": "string", "format":"date-time", "description":"Canonical archive measurement timestamp: capture completion, identical to measurement_completed_at."}, "measurement_datetime_local":{"type":"string","format":"date-time","description":"Local-offset representation of the canonical completion timestamp; measurement_timezone identifies the IANA zone."}, "measurement_started_at":{"oneOf":[{"type":"string","format":"date-time"},{"type":"null"}],"description":"Instant capture began, derived from completion time and stored duration."}, "measurement_completed_at":{"type":"string","format":"date-time","description":"Instant capture completed; authoritative measurement timestamp."}, "measurement_timezone": {"type": "string", "minLength": 1},
     "creator": {"$ref": "#/$defs/creator"}, "measurement_authors": {"type": "array", "items": {"$ref": "#/$defs/creator"}},
