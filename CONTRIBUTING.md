@@ -8,6 +8,8 @@ The archive format supports measurements created by other Resonance Lab users, i
 
 A submission may be accepted only when its structured data is internally consistent, validates against the current public schema, preserves measurement provenance and does not infer unknown metadata.
 
+Public setup and measurement IDs are assigned by the Direct Sound Records archive after acceptance. Contributors should not invent or manually allocate `DSR-SETUP` or `RL-YYYY` numbers; the submission package's UUIDs are sufficient for identity and duplicate detection.
+
 The person who performed a measurement and the person who submits it may be different. Direct Sound Records remains the archive publisher; publication does not imply that Direct Sound Records performed the measurement.
 
 ## Repository issues and pull requests
