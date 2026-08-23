@@ -15,6 +15,12 @@ The archive is **setup-centric**:
 
 A change in operating conditions does not create a new setup. A material change to the playback system itself — for example a different turntable, tonearm or cartridge — should normally receive a new setup identity.
 
+### Public ID assignment
+
+Resonance Lab generates permanent internal UUIDs for setups and measurements. Contributors do **not** need to choose public archive numbers. Submission packages are matched by UUID and the Direct Sound Records archive assigns public IDs centrally when records are accepted. This prevents collisions across users and devices and lets repeat submissions of the same measurement be recognized reliably.
+
+The current allocator uses six-digit measurement sequences, for example `RL-2026-000001`.
+
 ## Repository structure
 
 ```text
@@ -31,7 +37,7 @@ setups/
     README.md
     setup.json
     measurements/
-      RL-YYYY-NNNN/
+      RL-YYYY-NNNNNN/
         README.md
         measurement.json
         ...
@@ -46,6 +52,8 @@ The current public archive format is **Schema 2.0.0** and uses JSON Schema Draft
 - [`schemas/setup.schema.json`](schemas/setup.schema.json)
 - [`schemas/measurement.schema.json`](schemas/measurement.schema.json)
 - [`schemas/README.md`](schemas/README.md)
+
+The schema supports `draft`, `submission` and `published` states. Public measurement IDs may remain unassigned in a submission package and become mandatory only for the canonical published record.
 
 ## Measurement types
 
@@ -73,14 +81,14 @@ Consumers should interpret numerical fields according to the method version stor
 
 ## Public setups
 
-- [`DSR-SETUP-0001`](setups/DSR-SETUP-0001/) — Rega P3 / Rega RB330 / Audio-Technica AT-OC9XML.
+- [`DSR-SETUP-0001`](setups/DSR-SETUP-0001/) — Rega P3 / Rega RB330 / Audio-Technica AT-OC9XML — 3 published observations (2 RPM, 1 Vibration).
 
-The first published setup currently establishes the stable setup identity. Measurement records can be appended later without changing that ID.
+New measurements can be appended later without changing the setup ID.
 
 ## Data indexes
 
 - [`data/setups.csv`](data/setups.csv) — one row per public setup.
-- [`data/measurements.csv`](data/measurements.csv) — one row per public Resonance Lab observation.
+- [`data/measurements.csv`](data/measurements.csv) — one row per public Resonance Lab observation, including internal measurement UUID and source-submission provenance for duplicate detection and archive traceability.
 
 The indexes are discovery aids. The JSON record remains the canonical machine-readable source for each setup or measurement.
 
