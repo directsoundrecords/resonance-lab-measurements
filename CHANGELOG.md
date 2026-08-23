@@ -10,3 +10,8 @@
 - Documented method-versioned Vibration RMS, Dominant Peaks and Combined Resonance × Vibration interpretation.
 - Added setup and measurement indexes.
 - Added first public setup identity: `DSR-SETUP-0001`.
+- Added archive-assigned public-ID workflow for UUID-based submission packages.
+- Published the first three Resonance Lab observations under `DSR-SETUP-0001`:
+  - `RL-2026-000001` — RPM / W&F.
+  - `RL-2026-000002` — RPM / W&F.
+  - `RL-2026-000003` — Vibration.
