@@ -1,0 +1,58 @@
+{
+  "$schema" : "schemas/setup.schema.json",
+  "created_at" : "2026-08-22T21:13:08.853Z",
+  "last_modified" : "2026-08-23T14:53:56.219Z",
+  "license" : "CC-BY-4.0",
+  "playback_system" : {
+    "cartridge" : {
+      "alignment_geometry" : "not_recorded",
+      "anti_skate_setting" : "not_recorded",
+      "azimuth_setting" : "not_recorded",
+      "cartridge_mass_g" : 7.5999999999999996,
+      "compliance" : {
+        "calculation_value_um_mn" : 27.199999999999999,
+        "conversion_applied" : true,
+        "conversion_note" : "Published compliance converted with the saved factor 1.7.",
+        "published_reference_frequency_hz" : 100,
+        "published_value_um_mn" : 16,
+        "source" : "manufacturer"
+      },
+      "manufacturer" : "Audio-Technica",
+      "model" : "AT-OC9XML",
+      "mounting_hardware_mass_g" : 1,
+      "serial_number" : "not_recorded",
+      "stylus" : "Micro Line",
+      "vertical_tracking_force_g" : 2,
+      "vta_or_sra_setting" : "not_recorded"
+    },
+    "setup_name" : "Rega P3 Neo PSU MkII",
+    "tonearm" : {
+      "damping" : "not_recorded",
+      "effective_mass_g" : 11,
+      "headshell" : "not_recorded",
+      "headshell_mass_g" : "not_recorded",
+      "manufacturer" : "Rega",
+      "model" : "RB330",
+      "serial_number" : "not_recorded"
+    },
+    "turntable" : {
+      "clamp_or_weight" : "not_recorded",
+      "drive_type" : "not_recorded",
+      "manufacturer" : "Rega",
+      "model" : "P3",
+      "platter_mat" : "not_recorded",
+      "serial_number" : "not_recorded",
+      "suspension_type" : "not_recorded"
+    }
+  },
+  "public_setup_id" : "DSR-SETUP-0001",
+  "publication_status" : "published",
+  "publisher" : {
+    "location_label" : "London–Rome",
+    "name" : "Direct Sound Records",
+    "url" : "https://directsoundrecords.com/"
+  },
+  "schema_version" : "2.0.0",
+  "setup_name" : "Rega P3 Neo PSU MkII",
+  "setup_uuid" : "AED8BB91-5E90-4669-AEB0-61D8F52D2732"
+}
