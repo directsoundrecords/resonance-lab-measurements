@@ -30,11 +30,6 @@ setups/
   DSR-SETUP-0001/
     README.md
     setup.json
-    manifest.json
-    checksums.sha256
-    schemas/
-      setup.schema.json
-      measurement.schema.json
     measurements/
       RL-YYYY-NNNN/
         README.md
@@ -42,7 +37,7 @@ setups/
         ...
 ```
 
-Each exported setup package is self-contained. The top-level `schemas/` directory exposes the current canonical public schemas for discovery and validation.
+The repository keeps the current canonical schemas at the top level. Resonance Lab Reference Package ZIP exports may additionally embed schema copies, manifests and checksums so the exported package remains self-contained; repository records are normalized to the canonical repository structure above.
 
 ## Current schema
 
