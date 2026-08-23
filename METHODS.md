@@ -12,6 +12,21 @@ The setup is the long-lived playback-system identity. Measurements are dated obs
 
 A material change to the playback system itself — for example a different turntable, tonearm or cartridge — should normally create a new setup identity.
 
+## Archive-assigned public identifiers
+
+Resonance Lab creates immutable internal `setup_uuid` and `measurement_uuid` values automatically. These UUIDs are the permanent technical identities used to recognize the same setup or measurement across submissions.
+
+Contributors are not responsible for allocating public archive numbers. A Reference Package in `submission` state may contain null public measurement IDs. When a submission is accepted, the Direct Sound Records archive:
+
+1. matches an existing setup by `setup_uuid` or creates a new public setup identity;
+2. checks each `measurement_uuid` against the archive index to avoid duplicate publication;
+3. reuses an existing public measurement ID when that UUID is already published, or allocates the next archive ID when it is new;
+4. creates the canonical `published` record without changing the measurement UUID, measurement timestamp, numerical evidence, method version or authorship.
+
+Hardware names are never used as a substitute for UUID identity: two different users may legitimately own identical turntable/tonearm/cartridge combinations.
+
+The current measurement-ID allocator uses six-digit yearly sequences such as `RL-2026-000001`.
+
 ## Measurement timestamps
 
 Measurement timestamps describe when the observation occurred. Package-generation time is separate and must not replace the measurement timestamp.
@@ -64,7 +79,11 @@ Named, affiliated and anonymous contribution modes may be represented when expli
 
 ## Publication states
 
-The schema supports explicit publication state. Public records require valid public IDs. Draft records may remain without public IDs while they are being reviewed.
+The schema supports three explicit states:
+
+- `draft` — private/incomplete working record; public IDs may be null.
+- `submission` — complete Reference Package submitted for archive review; public measurement IDs may still be null because the archive assigns them centrally.
+- `published` — canonical public archive record; valid public setup and measurement IDs are required.
 
 Published numerical evidence should not be silently changed. Corrections or later analyses should preserve the historical record and document what changed.
 
