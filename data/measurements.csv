@@ -1,1 +1,4 @@
-measurement_id,setup_id,date,measurement_type,publication_status,author,key_result,record_path
+measurement_id,measurement_uuid,setup_id,date,measurement_type,publication_status,author,key_result,record_path,source_submission_uuid,source_package_sha256
+RL-2026-000001,164b83b8-987f-4d93-a8a2-89c2d4bd375a,DSR-SETUP-0001,2026-08-22T21:17:36.198Z,rpm_measurement,published,Anonymous contributor,33.396 RPM,setups/DSR-SETUP-0001/measurements/RL-2026-000001/,F092AC47-CA9A-4E98-84F3-98AC75B99C65,87ba46f4f3e1a394825c20f1c6e30b896227beebdeae574f3a017a1e4a3ab5df
+RL-2026-000002,6086515d-db06-46da-b93e-f0862183110f,DSR-SETUP-0001,2026-08-22T22:18:58.561Z,rpm_measurement,published,Anonymous contributor,33.404 RPM,setups/DSR-SETUP-0001/measurements/RL-2026-000002/,F092AC47-CA9A-4E98-84F3-98AC75B99C65,87ba46f4f3e1a394825c20f1c6e30b896227beebdeae574f3a017a1e4a3ab5df
+RL-2026-000003,efb8a878-364d-4ac7-8ce4-66b886d004e3,DSR-SETUP-0001,2026-08-22T22:38:05.067Z,vibration_measurement,published,Anonymous contributor,1.362 mg RMS,setups/DSR-SETUP-0001/measurements/RL-2026-000003/,F092AC47-CA9A-4E98-84F3-98AC75B99C65,87ba46f4f3e1a394825c20f1c6e30b896227beebdeae574f3a017a1e4a3ab5df
