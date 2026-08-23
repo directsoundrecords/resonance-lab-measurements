@@ -1,10 +1,18 @@
 # Resonance Lab public schemas
 
-The current public format is **2.0.0** and uses JSON Schema Draft 2020-12.
+The current public archive format is **Schema 2.0.0** using JSON Schema Draft 2020-12.
 
-- `setup.schema.json` validates the stable setup-level record.
-- `measurement.schema.json` validates independent Resonance Lab observations and applies type-specific rules for RPM and Vibration records.
+- `setup.schema.json` validates setup identity and playback-system metadata.
+- `measurement.schema.json` validates independent RPM and Vibration observations.
 
-Draft records may omit public IDs according to schema rules. Published records require valid public setup and measurement IDs.
+## Publication states
 
-Consumers should use the `analysis_method_version` and related method-version fields stored in each measurement when interpreting numerical results. Schema descriptions are intentionally method-neutral where historical and current analysis versions have different semantics.
+The schemas support three states:
+
+- `draft` — incomplete/private working record; public IDs may be null.
+- `submission` — complete Reference Package submitted for archive review; public measurement IDs may still be null because they are assigned centrally by the archive.
+- `published` — canonical public archive record; valid public setup and measurement IDs are required.
+
+Public IDs are archive-assigned metadata. Internal UUIDs remain the permanent technical identities used to recognize the same setup or measurement across submissions.
+
+Numerical fields must be interpreted according to each measurement's declared analysis-method version. Historical results are preserved rather than silently recalculated when methods evolve.
