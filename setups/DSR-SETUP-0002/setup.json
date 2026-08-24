@@ -1,0 +1,57 @@
+{
+  "$schema": "../../schemas/setup.schema.json",
+  "created_at": "2026-08-24T13:17:40.340Z",
+  "last_modified": "2026-08-24T20:45:19.197Z",
+  "license": "CC-BY-4.0",
+  "playback_system": {
+    "cartridge": {
+      "alignment_geometry": "not_recorded",
+      "anti_skate_setting": "not_recorded",
+      "azimuth_setting": "not_recorded",
+      "cartridge_mass_g": 7.2,
+      "compliance": {
+        "calculation_value_um_mn": 20,
+        "conversion_applied": false,
+        "published_reference_frequency_hz": 10,
+        "published_value_um_mn": 20,
+        "source": "not_recorded"
+      },
+      "manufacturer": "Ortofon",
+      "model": "2M Blue",
+      "mounting_hardware_mass_g": 1,
+      "serial_number": "not_recorded",
+      "stylus": "Elliptical",
+      "vertical_tracking_force_g": 1.8,
+      "vta_or_sra_setting": "not_recorded"
+    },
+    "setup_name": "Technics SL-1410mk2",
+    "tonearm": {
+      "damping": "not_recorded",
+      "effective_mass_g": 12.2,
+      "headshell": "not_recorded",
+      "headshell_mass_g": "not_recorded",
+      "manufacturer": "AMG",
+      "model": "12J2",
+      "serial_number": "not_recorded"
+    },
+    "turntable": {
+      "clamp_or_weight": "not_recorded",
+      "drive_type": "direct",
+      "manufacturer": "Technics",
+      "model": "SL-1410 mk2",
+      "platter_mat": "not_recorded",
+      "serial_number": "not_recorded",
+      "suspension_type": "suspended"
+    }
+  },
+  "public_setup_id": "DSR-SETUP-0002",
+  "publication_status": "published",
+  "publisher": {
+    "location_label": "London–Rome",
+    "name": "Direct Sound Records",
+    "url": "https://directsoundrecords.com/"
+  },
+  "schema_version": "2.0.0",
+  "setup_name": "Technics SL-1410mk2",
+  "setup_uuid": "E06A5C25-C861-4ACC-BB49-B88F5C56BAD5"
+}

@@ -82,6 +82,7 @@ Consumers should interpret numerical fields according to the method version stor
 ## Public setups
 
 - [`DSR-SETUP-0001`](setups/DSR-SETUP-0001/) — Rega P3 / Rega RB330 / Audio-Technica AT-OC9XML — 3 published observations (2 RPM, 1 Vibration).
+- [`DSR-SETUP-0002`](setups/DSR-SETUP-0002/) — Technics SL-1410 mk2 / AMG 12J2 / Ortofon 2M Blue — 6 published observations (2 RPM, 4 Vibration).
 
 New measurements can be appended later without changing the setup ID.
 

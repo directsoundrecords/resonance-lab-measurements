@@ -1,2 +1,3 @@
 setup_id,setup_uuid,publication_status,setup_name,turntable,tonearm,cartridge,record_path
 DSR-SETUP-0001,AED8BB91-5E90-4669-AEB0-61D8F52D2732,published,Rega P3 Neo PSU MkII,Rega P3,Rega RB330,Audio-Technica AT-OC9XML,setups/DSR-SETUP-0001/
+DSR-SETUP-0002,E06A5C25-C861-4ACC-BB49-B88F5C56BAD5,published,Technics SL-1410mk2,Technics SL-1410 mk2,AMG 12J2,Ortofon 2M Blue,setups/DSR-SETUP-0002/

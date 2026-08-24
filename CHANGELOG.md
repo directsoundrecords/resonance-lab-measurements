@@ -1,5 +1,19 @@
 # Changelog
 
+## 2026-08-24 — Second public setup
+
+- Added `DSR-SETUP-0002`: Technics SL-1410 mk2 / AMG 12J2 / Ortofon 2M Blue.
+- Published six Resonance Lab observations from submission `8F647DF0-1EBF-44F3-93BE-7005214E111D`:
+  - `RL-2026-000004` — RPM / W&F, record not recorded, stylus not tracking.
+  - `RL-2026-000005` — RPM / W&F, record present, stylus tracking.
+  - `RL-2026-000006` — Vibration, context not recorded.
+  - `RL-2026-000007` — Vibration, motor off / platter stationary / speakers inactive / phone on turntable top plate.
+  - `RL-2026-000008` — Vibration, motor off / platter stationary / speakers active / phone on plinth.
+  - `RL-2026-000009` — Vibration, motor off / platter stationary / speakers active / phone on platter.
+- Preserved the source-package SHA-256 in `data/measurements.csv` for archive traceability.
+- Accepted the revised submission package with deterministic publication-rendering metadata for exported charts.
+- Normalized source token `turntable_top_plate` to canonical Schema 2.0.0 token `top_plate` for `RL-2026-000007`.
+
 ## 2026-08-23 — Setup-centric public archive v2
 
 - Adopted public Schema `2.0.0`.
